@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.events;
+package de.bitnoise.abzuarbeiten.events;
 
 import java.awt.Graphics;
 

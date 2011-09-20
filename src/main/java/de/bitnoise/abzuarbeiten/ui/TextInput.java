@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.ui;
+package de.bitnoise.abzuarbeiten.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -18,12 +18,12 @@ import javax.swing.JTextArea;
 
 import com.thoughtworks.xstream.XStream;
 
-import de.bitnoise.aufgabe.Application;
-import de.bitnoise.aufgabe.model.Aufgabe;
-import de.bitnoise.aufgabe.model.Heading;
-import de.bitnoise.aufgabe.model.ITaskItem;
-import de.bitnoise.aufgabe.model.Status;
-import de.bitnoise.aufgabe.model.Zustand;
+import de.bitnoise.abzuarbeiten.Application;
+import de.bitnoise.abzuarbeiten.model.Aufgabe;
+import de.bitnoise.abzuarbeiten.model.Remark;
+import de.bitnoise.abzuarbeiten.model.ITaskItem;
+import de.bitnoise.abzuarbeiten.model.Status;
+import de.bitnoise.abzuarbeiten.model.Zustand;
 
 public class TextInput extends JPanel
 {
@@ -127,7 +127,7 @@ public class TextInput extends JPanel
     {
       return parseAufgabe(matcher);
     }
-    return new Heading(line);
+    return new Remark(line);
   }
 
   private ITaskItem parseAufgabe(Matcher matcher)

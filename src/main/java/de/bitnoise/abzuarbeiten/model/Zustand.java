@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.model;
+package de.bitnoise.abzuarbeiten.model;
 
 import java.util.ArrayList;
 import java.util.List;

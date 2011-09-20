@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.model;
+package de.bitnoise.abzuarbeiten.model;
 
 public class StatusOpen implements Status
 {

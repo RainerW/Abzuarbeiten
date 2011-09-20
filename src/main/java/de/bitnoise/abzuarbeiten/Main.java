@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe;
+package de.bitnoise.abzuarbeiten;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -6,11 +6,11 @@ import java.io.FileOutputStream;
 
 import com.thoughtworks.xstream.XStream;
 
-import de.bitnoise.aufgabe.model.Aufgabe;
-import de.bitnoise.aufgabe.model.Zustand;
-import de.bitnoise.aufgabe.state.Configuration;
-import de.bitnoise.aufgabe.state.WindowLayout;
-import de.bitnoise.aufgabe.ui.MainFrame;
+import de.bitnoise.abzuarbeiten.model.Aufgabe;
+import de.bitnoise.abzuarbeiten.model.Zustand;
+import de.bitnoise.abzuarbeiten.state.Configuration;
+import de.bitnoise.abzuarbeiten.state.WindowLayout;
+import de.bitnoise.abzuarbeiten.ui.MainFrame;
 
 public class Main
 {

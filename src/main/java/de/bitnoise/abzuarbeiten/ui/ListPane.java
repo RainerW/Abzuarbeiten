@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.ui;
+package de.bitnoise.abzuarbeiten.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
@@ -8,11 +8,11 @@ import javax.swing.JList;
 import javax.swing.JPanel;
 import javax.swing.ListModel;
 
-import de.bitnoise.aufgabe.Application;
-import de.bitnoise.aufgabe.events.AufgabenListeChanged;
-import de.bitnoise.aufgabe.events.IEvent;
-import de.bitnoise.aufgabe.events.IListener;
-import de.bitnoise.aufgabe.model.ITaskItem;
+import de.bitnoise.abzuarbeiten.Application;
+import de.bitnoise.abzuarbeiten.events.AufgabenListeChanged;
+import de.bitnoise.abzuarbeiten.events.IEvent;
+import de.bitnoise.abzuarbeiten.events.IListener;
+import de.bitnoise.abzuarbeiten.model.ITaskItem;
 
 public class ListPane extends JPanel implements IListener
 {

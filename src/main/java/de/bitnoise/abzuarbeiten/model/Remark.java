@@ -1,10 +1,13 @@
-package de.bitnoise.aufgabe.model;
+package de.bitnoise.abzuarbeiten.model;
 
-public class Heading implements ITaskItem
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("Remark")
+public class Remark implements ITaskItem
 {
   String heading;
 
-  public Heading(String line)
+  public Remark(String line)
   {
     heading = line;
   }

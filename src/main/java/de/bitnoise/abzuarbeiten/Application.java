@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe;
+package de.bitnoise.abzuarbeiten;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -8,12 +8,12 @@ import java.util.List;
 
 import com.thoughtworks.xstream.XStream;
 
-import de.bitnoise.aufgabe.events.AufgabenListeChanged;
-import de.bitnoise.aufgabe.events.IEvent;
-import de.bitnoise.aufgabe.events.IListener;
-import de.bitnoise.aufgabe.model.Aufgabe;
-import de.bitnoise.aufgabe.model.ITaskItem;
-import de.bitnoise.aufgabe.model.Zustand;
+import de.bitnoise.abzuarbeiten.events.AufgabenListeChanged;
+import de.bitnoise.abzuarbeiten.events.IEvent;
+import de.bitnoise.abzuarbeiten.events.IListener;
+import de.bitnoise.abzuarbeiten.model.Aufgabe;
+import de.bitnoise.abzuarbeiten.model.ITaskItem;
+import de.bitnoise.abzuarbeiten.model.Zustand;
 
 public class Application
 {
@@ -40,7 +40,8 @@ public class Application
     XStream xs = new XStream();
     try
     {
-      xs.toXML(_zustand, new FileOutputStream("zustand.xml"));
+      FileOutputStream fo = new FileOutputStream("zustand.xml");
+      xs.toXML(_zustand, fo);
     }
     catch (FileNotFoundException e)
     {

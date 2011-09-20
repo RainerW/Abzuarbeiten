@@ -1,9 +1,9 @@
-package de.bitnoise.aufgabe.events;
+package de.bitnoise.abzuarbeiten.events;
 
 import java.util.List;
 
-import de.bitnoise.aufgabe.model.Aufgabe;
-import de.bitnoise.aufgabe.model.ITaskItem;
+import de.bitnoise.abzuarbeiten.model.Aufgabe;
+import de.bitnoise.abzuarbeiten.model.ITaskItem;
 
 public class AufgabenListeChanged implements IEvent
 {

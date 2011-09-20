@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.ui;
+package de.bitnoise.abzuarbeiten.ui;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;
@@ -7,8 +7,8 @@ import java.awt.FlowLayout;
 import javax.swing.JFrame;
 import javax.swing.JSplitPane;
 
-import de.bitnoise.aufgabe.Application;
-import de.bitnoise.aufgabe.model.Zustand;
+import de.bitnoise.abzuarbeiten.Application;
+import de.bitnoise.abzuarbeiten.model.Zustand;
 
 public class MainFrame extends JFrame
 {
@@ -22,6 +22,7 @@ public class MainFrame extends JFrame
     setMinimumSize(new Dimension(200, 200));
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     pack();
+    setTitle("Abzuarbeiten");
     setVisible(true);
   }
 

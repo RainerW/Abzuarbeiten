@@ -1,4 +1,4 @@
-package de.bitnoise.aufgabe.state;
+package de.bitnoise.abzuarbeiten.state;
 
 public class WindowLayout
 {

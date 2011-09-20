@@ -1,5 +1,8 @@
-package de.bitnoise.aufgabe.model;
+package de.bitnoise.abzuarbeiten.model;
 
+import com.thoughtworks.xstream.annotations.XStreamAlias;
+
+@XStreamAlias("Aufgabe")
 public class Aufgabe implements ITaskItem
 {
   public Status status;
@@ -13,7 +16,7 @@ public class Aufgabe implements ITaskItem
   }
 
   /* (non-Javadoc)
-   * @see de.bitnoise.aufgabe.model.ITaskItem#getLine(java.lang.StringBuilder)
+   * @see de.bitnoise.abzuarbeiten.model.ITaskItem#getLine(java.lang.StringBuilder)
    */
   public void getLine(StringBuilder sb)
   {
