@@ -2,35 +2,41 @@ package de.bitnoise.abzuarbeiten.model;
 
 import com.thoughtworks.xstream.annotations.XStreamAlias;
 
+import de.bitnoise.abzuarbeiten.model.ComplexLine.Part;
+
 @XStreamAlias("Aufgabe")
-public class Aufgabe implements ITaskItem
-{
-  public Status status;
+public class Aufgabe implements ITaskItem {
+	public Status status;
 
-  public String name;
+	public String name;
 
-  @Override
-  public String toString()
-  {
-    return (status != null ? status.toString() : "") + " " + name;
-  }
+	@Override
+	public String toString() {
+		return (status != null ? status.toString() : "") + " " + name;
+	}
 
-  /* (non-Javadoc)
-   * @see de.bitnoise.abzuarbeiten.model.ITaskItem#getLine(java.lang.StringBuilder)
-   */
-  public void getLine(StringBuilder sb)
-  {
-    if (status == null)
-    {
-      sb.append("[ ]");
-    }
-    else
-    {
-      status.getLine(sb);
-    }
-    sb.append(" ");
+	public Status getStatus() {
+		if (status == null) {
+			return new StatusOpen();
+		}
+		return status;
+	}
 
-    sb.append(name);
-
-  }
+	@Override
+	public Line getLine() {
+		ComplexLine line = new ComplexLine();
+		{ // Checkbox
+			getStatus().appendTo(line);
+		}
+		{ // spacer
+			line.append(" ");
+		}
+		{ // actual Text
+			Part part = line.append(name);
+			if (getStatus() instanceof StatusClosed) {
+				part.setStrike(true);
+			}
+		}
+		return line;
+	}
 }

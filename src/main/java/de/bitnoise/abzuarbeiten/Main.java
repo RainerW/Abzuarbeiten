@@ -30,6 +30,6 @@ public class Main
     // System.out.println(xs.toXML(cfg));
     // }
 
-    new MainFrame().open(new Application());
+    new MainFrame().open();
   }
 }

@@ -9,18 +9,25 @@ import java.util.List;
 import com.thoughtworks.xstream.XStream;
 
 import de.bitnoise.abzuarbeiten.events.AufgabenListeChanged;
-import de.bitnoise.abzuarbeiten.events.IEvent;
 import de.bitnoise.abzuarbeiten.events.IListener;
-import de.bitnoise.abzuarbeiten.model.Aufgabe;
 import de.bitnoise.abzuarbeiten.model.ITaskItem;
 import de.bitnoise.abzuarbeiten.model.Zustand;
 
 public class Application {
+	private static Application _app;
+
 	Zustand _zustand;
 
 	List<IListener> _listeners = new ArrayList<IListener>();
 
-	public Application() {
+	public static Application get() {
+		if (_app == null) {
+			_app = new Application();
+		}
+		return _app;
+	}
+
+	private Application() {
 		XStream xs = new XStream();
 		File f = new File("zustand.xml");
 		if (f.exists()) {
